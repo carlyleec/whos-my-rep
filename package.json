@@ -1,0 +1,57 @@
+{
+  "name": "cc-react",
+  "version": "0.0.1",
+  "description": "A react version of cameroncarlyle.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 3000 --content-base dist/ --history-api-fallback",
+    "clean": "rimraf dist",
+    "webpack": "webpack -p",
+    "build": "npm-run-all clean webpack",
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlyleec/cc-react.git"
+  },
+  "keywords": [
+    "Cameron Carlyle",
+    "design",
+    "development",
+    "JavaScript",
+    "data"
+  ],
+  "author": "carlyleec@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carlyleec/cc-react.git/issues"
+  },
+  "homepage": "http://www.cameroncarlyle.com/",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "html-webpack-plugin": "^2.24.1",
+    "jest": "^19.0.2",
+    "rimraf": "^2.6.1",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.4"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0",
+    "styled-components": "^1.4.4"
+  }
+}
