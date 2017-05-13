@@ -7,6 +7,8 @@ import {
   REPS_FETCH_SUCCEEDED,
   REPS_FETCH_FAILED,
   TOGGLE_SHOW_DETAIL_CLICKED,
+  LOADING_STARTED,
+  LOADING_ENDED,
 } from './constants';
 
 export const errorFound = message => ({
@@ -47,4 +49,12 @@ export const repsFetchFailed = message => ({
 export const toggleShowDetailClicked = detailIndex => ({
   type: TOGGLE_SHOW_DETAIL_CLICKED,
   detailIndex,
+});
+
+export const loadingStarted = () => ({
+  type: LOADING_STARTED,
+});
+
+export const loadingEnded = () => ({
+  type: LOADING_ENDED
 });

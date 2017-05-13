@@ -35,6 +35,23 @@ const PartyCircle = styled.div`
   }
 `;
 
+const renderDistricts = (district) => {
+  if (district.length > 0) {
+    return (
+      <tr>
+        <td>District: </td>
+        <td>{district}</td>
+      </tr>
+    );
+  }
+  return (
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  );
+};
+
 const RepList = ({ reps, showDetails, onClick }) => (
   <Showable show={reps.length > 0}>
     <CardList >
@@ -49,20 +66,17 @@ const RepList = ({ reps, showDetails, onClick }) => (
               <Showable show={showDetails.indexOf(index) !== -1}>
                 <Table>
                   <tbody>
+                    { renderDistricts(rep.district) }
                     <tr>
-                      <td>District:</td>
-                      <td>{rep.district}</td>
-                    </tr>
-                    <tr>
-                      <td>Address</td>
+                      <td>Address: </td>
                       <td>{rep.office}</td>
                     </tr>
                     <tr>
-                      <td>Phone:</td>
+                      <td>Phone: </td>
                       <td>{rep.phone}</td>
                     </tr>
                     <tr>
-                      <td>Website:</td>
+                      <td>Website: </td>
                       <td><a href={rep.link} target="_blank">{rep.link}</a></td>
                     </tr>
                   </tbody>

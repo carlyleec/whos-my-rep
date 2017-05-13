@@ -10,6 +10,7 @@ import Button from '../../components/Button';
 import RepList from '../../components/RepList';
 import Showable from '../../components/Showable';
 import ErrorMessage from '../../components/ErrorMessage';
+import Loading from '../../components/Loading';
 
 import { REP_TYPE_OPTIONS, STATE_OPTIONS } from './constants';
 import {
@@ -27,7 +28,7 @@ const AppWrapper = styled.div`
   }
 `;
 
-const App = ({ repType, repState, onChangeRepType, onChangeRepState, fetchReps, reps, showDetails, toggleRepDetails, errorMessage, dismissError}) => {
+const App = ({ repType, repState, onChangeRepType, onChangeRepState, fetchReps, reps, showDetails, toggleRepDetails, errorMessage, dismissError, loading}) => {
   const valid = repType !== 'default' && repState !== 'default';
   return (
     <Container>
@@ -40,6 +41,7 @@ const App = ({ repType, repState, onChangeRepType, onChangeRepState, fetchReps, 
           <ErrorMessage onClick={dismissError}>{errorMessage}</ErrorMessage>
         </Showable>
         <Button type="button" size="large" onClick={() => fetchReps(repType, repState)} valid={valid}>FIND MY REPS</Button>
+        <Loading show={loading}>Loading ...</Loading>
         <RepList reps={reps} onClick={toggleRepDetails} showDetails={showDetails} />
       </AppWrapper>
     </Container>
@@ -53,6 +55,7 @@ const mapStateToProps = state => (
     reps: state.appReducer.reps,
     showDetails: state.appReducer.showDetails,
     errorMessage: state.appReducer.errorMessage,
+    loading: state.appReducer.loading,
   }
 );
 

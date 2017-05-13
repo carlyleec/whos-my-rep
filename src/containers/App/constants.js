@@ -8,6 +8,8 @@ export const REPS_FETCH_REQUESTED = 'whos_my_rep/App/REPS_FETCH_REQUESTED';
 export const REPS_FETCH_SUCCEEDED = 'whos_my_rep/App/REPS_FETCH_SUCCEEDED';
 export const REPS_FETCH_FAILED = 'whos_my_rep/App/REPS_FETCH_FAILED';
 export const TOGGLE_SHOW_DETAIL_CLICKED = 'whos_my_rep/App/TOGGLE_SHOW_DETAIL_CLICKED';
+export const LOADING_STARTED = 'whos_my_rep/App/LOADING_STARTED';
+export const LOADING_ENDED = 'whos_my_rep/App/LOADING_ENDED';
 
 export const ERR_MESSAGE_FORM_INCOMPLETE = 'You need to select both a representative type and your state before we can find your reps.';
 

@@ -3,9 +3,12 @@ import {
   DISMISS_ERROR_CLICKED,
   SELECTED_REP_TYPE,
   SELECTED_REP_STATE,
+  REPS_FETCH_REQUESTED,
   REPS_FETCH_SUCCEEDED,
   REPS_FETCH_FAILED,
   TOGGLE_SHOW_DETAIL_CLICKED,
+  LOADING_STARTED,
+  LOADING_ENDED,
 } from './constants';
 
 
@@ -81,6 +84,7 @@ const initialState = {
   errorMessage: '',
   showDetails: [],
   reps: [],
+  loading: false,
 };
 
 const appReducer = (state = initialState, action) => {
@@ -100,6 +104,11 @@ const appReducer = (state = initialState, action) => {
     case SELECTED_REP_STATE:
       return Object.assign({}, state, {
         repState: action.repState,
+      });
+    case REPS_FETCH_REQUESTED:
+      return Object.assign({}, state, {
+        showDetails: [],
+        reps: [],
       });
     case REPS_FETCH_SUCCEEDED:
       return Object.assign({}, state, {
@@ -123,6 +132,14 @@ const appReducer = (state = initialState, action) => {
           ...state.showDetails.slice(showDetailIndex + 1)],
       });
     }
+    case LOADING_STARTED:
+      return Object.assign({}, state, {
+        loading: true,
+      });
+    case LOADING_ENDED:
+      return Object.assign({}, state, {
+        loading: false,
+      });
     default:
       return state;
   }

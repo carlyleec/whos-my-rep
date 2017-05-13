@@ -2,6 +2,8 @@
 
 A React version of Who's my representative?
 
+You check it out here: http://whos-my-reps.s3-website-us-west-1.amazonaws.com/
+
 It pulls data from this JSON REST endpoints:
 https://find-rep-api-express.herokuapp.com/representatives/:state
 https://find-rep-api-express.herokuapp.com/senators/:state
