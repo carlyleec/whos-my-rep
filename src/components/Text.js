@@ -1,13 +1,13 @@
 import React from 'react'; // eslint-disable-line
 import styled from 'styled-components';
 
-const Title = styled.h1`
-  color: #1FA8EA;
-  font-weight: 700;
-  font-size: 1.5em;
+const Text = styled.p`
+  color: #424242;
+  font-weight: 100;
+  font-size: .75em;
   @media (min-width: 480px) {
-    font-size: 2.5em;
+    font-size: 1.5em;
   }
 `;
 
-export default Title;
+export default Text;

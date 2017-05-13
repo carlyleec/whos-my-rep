@@ -1,13 +1,13 @@
 import React from 'react'; // eslint-disable-line
 import styled from 'styled-components';
 
-const Container = styled.div`
+const CardSection = styled.div`
   display: flex;
-  flex-basis: 90%;
-  flex-wrap: wrap;
+  flex-basis: 100%;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  margin: 15px;
+  margin: 0;
 `;
 
-export default Container;
+export default CardSection;

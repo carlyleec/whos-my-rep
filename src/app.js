@@ -1,17 +1,29 @@
-import React from 'react';
+import 'babel-polyfill';
+import React from 'react'; // eslint-disable-line
+import { Provider } from 'react-redux';
 import { render } from 'react-dom';
+import { createStore, applyMiddleware, compose } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 
-import App from './components/App';
+import reducers from './reducers';
+import sagas from './sagas';
 
-// Import Redux Store
-import configureStore from './configureStore';
-
+import App from './containers/App';
 
 // Import styles
 require('./styles/styles.css');
 
+const sagaMiddleware = createSagaMiddleware();
 
-const store = configureStore();
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line
 
+const store = createStore(reducers, composeEnhancers(applyMiddleware(sagaMiddleware)));
 
-render(<App store={store} />, document.getElementById('app'));
+sagaMiddleware.run(sagas);
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+);
