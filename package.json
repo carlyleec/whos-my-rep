@@ -4,7 +4,7 @@
   "description": "A react version of cameroncarlyle.com",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --port 3000 --content-base dist/ --history-api-fallback",
+    "start": "webpack-dev-server --port 3000 --content-base docs/ --history-api-fallback",
     "clean": "rimraf dist",
     "webpack": "webpack -p",
     "build": "npm-run-all clean webpack",
@@ -12,19 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carlyleec/cc-react.git"
+    "url": "git+https://github.com/carlyleec/whos-my-rep.git"
   },
   "keywords": [
     "Cameron Carlyle",
-    "design",
-    "development",
+    "representatives",
+    "civic",
     "JavaScript",
-    "data"
+    "React"
   ],
   "author": "carlyleec@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carlyleec/cc-react.git/issues"
+    "url": "https://github.com/carlyleec/whos-my-rep.git/issues"
   },
   "homepage": "http://www.cameroncarlyle.com/",
   "devDependencies": {

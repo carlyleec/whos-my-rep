@@ -11,7 +11,7 @@ module.exports = {
     app: path.join(__dirname, 'src', 'app.js'),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: '[name].[chunkhash].bundle.js',
     publicPath: '/',
   },
@@ -34,7 +34,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'docs'),
     inline: true,
     stats: 'errors-only',
   },
