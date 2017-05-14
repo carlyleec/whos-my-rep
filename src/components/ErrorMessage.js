@@ -14,13 +14,14 @@ const Wrapper = styled.div`
 
 const ErrorText = styled.p`
   flex: 1 1;
-  font-weight: 100;
+  font-weight: 400;
   font-size: .75em;
   color: #FFF;
   margin-left: 10px;
   align-self: flex-start;
   @media (min-width: 480px) {
     font-size: 1.5em;
+    font-weight: 100;
   }
 `;
 

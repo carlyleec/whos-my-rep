@@ -4,17 +4,18 @@ import styled from 'styled-components';
 
 const SelectBox = styled.select`
   flex: 0 1 100%;
-  border: 3px solid #757575;
+  border: 1px solid #757575;
   border-radius: 4px;
   outline: none;
   color: #616161;
-  font-size: 1em;
+  font-size: 1.2em;
   background: #FFF;
   &:hover{
     border: 3px solid #039BE5;
   }
   @media (min-width: 480px) {
     font-size: 2em;
+    border: 3px solid #757575;
   }
 `;
 

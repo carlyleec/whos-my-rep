@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --port 3000 --content-base docs/ --history-api-fallback",
-    "clean": "rimraf dist",
+    "clean": "rimraf docs",
     "webpack": "webpack -p",
     "build": "npm-run-all clean webpack",
     "test": "jest --watch"
