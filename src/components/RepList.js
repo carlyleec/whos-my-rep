@@ -8,6 +8,19 @@ import Button from './Button';
 import Table from './Table';
 import Showable from './Showable';
 
+const getPartyColor = (party) => {
+  switch (party) {
+    case 'Democrat':
+      return '#1976D2';
+    case 'Republican':
+      return '#D32F2F';
+    case 'Independent':
+      return '#7B1FA2';
+    default:
+      return '#616161';
+  }
+};
+
 const RepName = styled.h2`
   flex: 1 1;
   padding: 0;
@@ -26,7 +39,7 @@ const PartyCircle = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  background: ${props => (props.party === 'Democrat' ? '#1976D2' : '#D32F2F')};
+  background: ${props => (getPartyColor(props.party))};
   color: white;
   font-weight: 700;
   @media (min-width: 480px) {
